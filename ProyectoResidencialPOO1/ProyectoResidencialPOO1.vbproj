@@ -89,7 +89,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conector.vb" />
+    <Compile Include="AdministradorBotones.vb" />
+    <Compile Include="BDAdmin.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>

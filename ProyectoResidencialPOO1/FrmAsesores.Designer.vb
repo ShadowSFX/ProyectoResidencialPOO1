@@ -40,9 +40,9 @@ Partial Class FrmAsesores
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -206,14 +206,14 @@ Partial Class FrmAsesores
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnEliminar
         '
-        Me.Button1.Location = New System.Drawing.Point(174, 19)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "Eliminar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnEliminar.Location = New System.Drawing.Point(174, 19)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 20
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'BtnGuardar
         '
@@ -224,14 +224,14 @@ Partial Class FrmAsesores
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnCancelar
         '
-        Me.Button3.Location = New System.Drawing.Point(356, 19)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 22
-        Me.Button3.Text = "Cancelar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnCancelar.Location = New System.Drawing.Point(356, 19)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.TabIndex = 22
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -246,12 +246,12 @@ Partial Class FrmAsesores
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.btnAgregar)
         Me.GroupBox1.Controls.Add(Me.BtnModificar)
         Me.GroupBox1.Controls.Add(Me.BtnGuardar)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 45)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(447, 56)
@@ -290,6 +290,9 @@ Partial Class FrmAsesores
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FrmAsesores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Maestro de asesores"
@@ -320,9 +323,9 @@ Partial Class FrmAsesores
     Friend WithEvents Label7 As Label
     Friend WithEvents btnAgregar As Button
     Friend WithEvents BtnModificar As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents BtnGuardar As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnCancelar As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
