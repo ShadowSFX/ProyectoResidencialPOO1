@@ -55,9 +55,9 @@ Partial Class FrmAsesores
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(-4, -1)
+        Me.PictureBox1.Location = New System.Drawing.Point(-4, -2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(615, 40)
+        Me.PictureBox1.Size = New System.Drawing.Size(483, 40)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -66,7 +66,7 @@ Partial Class FrmAsesores
         Me.lblTitulo.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblTitulo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.ForeColor = System.Drawing.Color.Teal
-        Me.lblTitulo.Location = New System.Drawing.Point(186, 4)
+        Me.lblTitulo.Location = New System.Drawing.Point(186, 3)
         Me.lblTitulo.Name = "lblTitulo"
         Me.lblTitulo.Size = New System.Drawing.Size(282, 31)
         Me.lblTitulo.TabIndex = 1
@@ -76,6 +76,7 @@ Partial Class FrmAsesores
         'txtCodAsesor
         '
         Me.txtCodAsesor.Location = New System.Drawing.Point(81, 24)
+        Me.txtCodAsesor.MaxLength = 5
         Me.txtCodAsesor.Name = "txtCodAsesor"
         Me.txtCodAsesor.Size = New System.Drawing.Size(100, 20)
         Me.txtCodAsesor.TabIndex = 0
@@ -83,6 +84,7 @@ Partial Class FrmAsesores
         'txtNombres
         '
         Me.txtNombres.Location = New System.Drawing.Point(81, 50)
+        Me.txtNombres.MaxLength = 30
         Me.txtNombres.Name = "txtNombres"
         Me.txtNombres.Size = New System.Drawing.Size(100, 20)
         Me.txtNombres.TabIndex = 1
@@ -90,6 +92,7 @@ Partial Class FrmAsesores
         'txtApellidos
         '
         Me.txtApellidos.Location = New System.Drawing.Point(261, 50)
+        Me.txtApellidos.MaxLength = 25
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(100, 20)
         Me.txtApellidos.TabIndex = 2
@@ -97,6 +100,7 @@ Partial Class FrmAsesores
         'txtDireccion
         '
         Me.txtDireccion.Location = New System.Drawing.Point(81, 76)
+        Me.txtDireccion.MaxLength = 80
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(100, 20)
         Me.txtDireccion.TabIndex = 3
@@ -104,6 +108,7 @@ Partial Class FrmAsesores
         'txtDui
         '
         Me.txtDui.Location = New System.Drawing.Point(81, 102)
+        Me.txtDui.MaxLength = 10
         Me.txtDui.Name = "txtDui"
         Me.txtDui.Size = New System.Drawing.Size(100, 20)
         Me.txtDui.TabIndex = 5

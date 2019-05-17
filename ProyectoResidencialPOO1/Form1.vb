@@ -10,4 +10,9 @@
         FrmAsesores1.Show()
     End Sub
 
+    Private Sub MaestroDeEmpresasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MaestroDeEmpresasToolStripMenuItem.Click
+        Dim frmEmpresas1 As FrmEmpresas = New FrmEmpresas()
+        frmEmpresas1.MdiParent = Me
+        frmEmpresas1.Show()
+    End Sub
 End Class

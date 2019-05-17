@@ -76,7 +76,6 @@ Public Class BDAdmin
     End Function
 
     Public Function EjecutarConsulta(sConsulta As String)
-
         Try
             Using MySQLConn As MySqlConnection = New MySqlConnection(sCadenaConexion)
                 MySQLConn.Open()

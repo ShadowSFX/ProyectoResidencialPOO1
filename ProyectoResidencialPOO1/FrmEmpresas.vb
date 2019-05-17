@@ -1,5 +1,4 @@
-﻿Public Class FrmAsesores
-
+﻿Public Class FrmEmpresas
     Dim sModo As String = "B"
 
     Dim objAdminBotones As AdministradorBotones
@@ -24,17 +23,17 @@
         Dim sConsulta As String
 
         If sModo = "C" Then 'creando registro nuevo
-            If BDAdmin.getInstance.BuscarRegistro("asesores", "codasesor", txtCodAsesor.Text) = 1 Then
-                MessageBox.Show("Ya existe un asesor con el código ingresado")
+            If BDAdmin.getInstance.BuscarRegistro("empresas", "codempresa", txtCodEmpresa.Text) = 1 Then
+                MessageBox.Show("Ya existe una empresa con el código ingresado")
                 Return
             Else
-                sConsulta = String.Format("INSERT INTO asesores (`codasesor`, `nombres`, `apellidos`, `direccion`, `telefono`, `dui`, `nit`) " &
-                                                        "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", txtCodAsesor.Text, txtNombres.Text,
-                                                        txtApellidos.Text, txtDireccion.Text, txtTelefono.Text, txtDui.Text, txtNit.Text)
+                sConsulta = String.Format("INSERT INTO empresas (`codempresa`, `nombre`, `direccion`, `telefono`, `nrc`, `nit`) " &
+                                                        "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtCodEmpresa.Text, txtNombre.Text,
+                                                        txtDireccion.Text, txtTelefono.Text, txtNRC.Text, txtNit.Text)
             End If
         Else ' Modificando
-            sConsulta = String.Format("UPDATE asesores SET `nombres` = '{0}', `apellidos` = '{1}', `direccion` = '{2}', `telefono` = '{3}', `dui` = '{4}', `nit` = '{5}'" &
-                                       " WHERE codasesor = '{6}'", txtNombres.Text, txtApellidos.Text, txtDireccion.Text, txtTelefono.Text, txtDui.Text, txtNit.Text, txtCodAsesor.Text)
+            sConsulta = String.Format("UPDATE empresas SET `nombre` = '{0}', `direccion` = '{1}', `telefono` = '{2}', `nrc` = '{3}', `nit` = '{4}' WHERE codempresa ='{5}'",
+                                      txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtNRC.Text, txtNit.Text, txtCodEmpresa.Text)
         End If
 
         If BDAdmin.getInstance.EjecutarComando(sConsulta) = 1 Then
@@ -46,6 +45,7 @@
 
             sModo = "B"
             objAdminBotones.CambiarEstados(sModo)
+            LimpiarTextBoxes()
         Else
             If sModo = "C" Then
                 MessageBox.Show("No se pudo agregar el registro.")
@@ -61,28 +61,26 @@
         LimpiarTextBoxes()
     End Sub
 
-    Private Sub txtCodAsesor_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCodAsesor.KeyDown
+    Private Sub txtCodAsesor_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCodEmpresa.KeyDown
         If e.KeyCode = Keys.Return And sModo = "B" Then
             Try
-                Dim sConsulta As String = String.Format("SELECT * FROM asesores WHERE codasesor = '{0}'", txtCodAsesor.Text)
+                Dim sConsulta As String = String.Format("SELECT * FROM empresas WHERE codempresa = '{0}'", txtCodEmpresa.Text)
 
                 Using Lector As DataTableReader = BDAdmin.getInstance.EjecutarConsulta(sConsulta)
                     While Lector.Read
-                        txtNombres.Text = CStr(Lector("nombres"))
-                        txtApellidos.Text = CStr(Lector("apellidos"))
+                        txtNombre.Text = CStr(Lector("nombre"))
                         txtDireccion.Text = CStr(Lector("direccion"))
                         txtTelefono.Text = CStr(Lector("telefono"))
-                        txtDui.Text = CStr(Lector("dui"))
+                        txtNRC.Text = CStr(Lector("nrc"))
                         txtNit.Text = CStr(Lector("nit"))
                     End While
                 End Using
 
-                If txtNombres.Text = "" Then
-                    MessageBox.Show("No se encontró un asesor con el código ingresado.")
+                If txtNombre.Text = "" Then
+                    MessageBox.Show("No se encontró la empresa con el código ingresado.")
                 Else
                     objAdminBotones.CambiarEstados("E")
                 End If
-
 
             Catch ex As MySql.Data.MySqlClient.MySqlException
                 MessageBox.Show(ex.Message)
@@ -93,22 +91,21 @@
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim sConsulta As String = String.Format("DELETE FROM asesores WHERE codasesor = '{0}'", txtCodAsesor.Text)
+        Dim sConsulta As String = String.Format("DELETE FROM empresas WHERE codempresa = '{0}'", txtCodEmpresa.Text)
         If BDAdmin.getInstance.EjecutarComando(sConsulta) = 1 Then
-            MessageBox.Show("Asesor eliminado satisfactoriamente.")
+            MessageBox.Show("Empresa eliminada satisfactoriamente.")
             LimpiarTextBoxes()
         Else
-            MessageBox.Show("No se pudo eliminar el asesor.")
+            MessageBox.Show("No se pudo eliminar la empresa.")
         End If
     End Sub
 
     Private Sub LimpiarTextBoxes()
-        txtCodAsesor.Text = ""
-        txtNombres.Text = ""
-        txtApellidos.Text = ""
+        txtCodEmpresa.Text = ""
+        txtNombre.Text = ""
         txtDireccion.Text = ""
         txtTelefono.Text = ""
-        txtDui.Text = ""
+        txtNRC.Text = ""
         txtNit.Text = ""
     End Sub
 

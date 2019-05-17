@@ -24,6 +24,7 @@ Partial Class FrmPrincipal
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaestroDeEmpresasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaestroDeAsesoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
@@ -40,21 +41,27 @@ Partial Class FrmPrincipal
         '
         'ArchivoToolStripMenuItem
         '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MaestroDeAsesoresToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MaestroDeEmpresasToolStripMenuItem, Me.MaestroDeAsesoresToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
         Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
         '
+        'MaestroDeEmpresasToolStripMenuItem
+        '
+        Me.MaestroDeEmpresasToolStripMenuItem.Name = "MaestroDeEmpresasToolStripMenuItem"
+        Me.MaestroDeEmpresasToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.MaestroDeEmpresasToolStripMenuItem.Text = "Maestro de empresas"
+        '
         'MaestroDeAsesoresToolStripMenuItem
         '
         Me.MaestroDeAsesoresToolStripMenuItem.Name = "MaestroDeAsesoresToolStripMenuItem"
-        Me.MaestroDeAsesoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MaestroDeAsesoresToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.MaestroDeAsesoresToolStripMenuItem.Text = "Maestro de asesores"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'FrmPrincipal
@@ -78,4 +85,5 @@ Partial Class FrmPrincipal
     Friend WithEvents ArchivoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MaestroDeAsesoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MaestroDeEmpresasToolStripMenuItem As ToolStripMenuItem
 End Class
