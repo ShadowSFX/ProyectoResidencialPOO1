@@ -27,12 +27,14 @@ Partial Class FrmPrincipal
         Me.MaestroDeEmpresasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaestroDeAsesoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransaccionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarTransacciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.TransaccionesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1146, 24)
@@ -64,6 +66,19 @@ Partial Class FrmPrincipal
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
+        'TransaccionesToolStripMenuItem
+        '
+        Me.TransaccionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarTransacciónToolStripMenuItem})
+        Me.TransaccionesToolStripMenuItem.Name = "TransaccionesToolStripMenuItem"
+        Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(93, 20)
+        Me.TransaccionesToolStripMenuItem.Text = "Transacciones"
+        '
+        'RegistrarTransacciónToolStripMenuItem
+        '
+        Me.RegistrarTransacciónToolStripMenuItem.Name = "RegistrarTransacciónToolStripMenuItem"
+        Me.RegistrarTransacciónToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.RegistrarTransacciónToolStripMenuItem.Text = "Registrar transacción"
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -86,4 +101,6 @@ Partial Class FrmPrincipal
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MaestroDeAsesoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MaestroDeEmpresasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TransaccionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarTransacciónToolStripMenuItem As ToolStripMenuItem
 End Class

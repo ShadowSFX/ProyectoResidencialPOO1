@@ -15,4 +15,10 @@
         frmEmpresas1.MdiParent = Me
         frmEmpresas1.Show()
     End Sub
+
+    Private Sub RegistrarTransacciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarTransacciónToolStripMenuItem.Click
+        Dim frmTransacciones1 As frmTransacciones = New frmTransacciones()
+        frmTransacciones1.MdiParent = Me
+        frmTransacciones1.Show()
+    End Sub
 End Class
