@@ -29,6 +29,8 @@ Partial Class FrmPrincipal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaccionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarTransacciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaestroDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaestroDeViviendasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,7 +45,7 @@ Partial Class FrmPrincipal
         '
         'ArchivoToolStripMenuItem
         '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MaestroDeEmpresasToolStripMenuItem, Me.MaestroDeAsesoresToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MaestroDeEmpresasToolStripMenuItem, Me.MaestroDeAsesoresToolStripMenuItem, Me.MaestroDeClientesToolStripMenuItem, Me.MaestroDeViviendasToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
         Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
@@ -79,6 +81,18 @@ Partial Class FrmPrincipal
         Me.RegistrarTransacciónToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.RegistrarTransacciónToolStripMenuItem.Text = "Registrar transacción"
         '
+        'MaestroDeClientesToolStripMenuItem
+        '
+        Me.MaestroDeClientesToolStripMenuItem.Name = "MaestroDeClientesToolStripMenuItem"
+        Me.MaestroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.MaestroDeClientesToolStripMenuItem.Text = "Maestro de clientes"
+        '
+        'MaestroDeViviendasToolStripMenuItem
+        '
+        Me.MaestroDeViviendasToolStripMenuItem.Name = "MaestroDeViviendasToolStripMenuItem"
+        Me.MaestroDeViviendasToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.MaestroDeViviendasToolStripMenuItem.Text = "Maestro de viviendas"
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -103,4 +117,6 @@ Partial Class FrmPrincipal
     Friend WithEvents MaestroDeEmpresasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaccionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarTransacciónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MaestroDeClientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MaestroDeViviendasToolStripMenuItem As ToolStripMenuItem
 End Class

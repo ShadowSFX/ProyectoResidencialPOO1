@@ -21,4 +21,16 @@
         frmTransacciones1.MdiParent = Me
         frmTransacciones1.Show()
     End Sub
+
+    Private Sub MaestroDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MaestroDeClientesToolStripMenuItem.Click
+        Dim frmMaestroClientes1 As FrmClientes = New FrmClientes()
+        frmMaestroClientes1.MdiParent = Me
+        frmMaestroClientes1.Show()
+    End Sub
+
+    Private Sub MaestroDeViviendasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MaestroDeViviendasToolStripMenuItem.Click
+        Dim frmMaestroViviendas1 As FrmMaestroViviendas = New FrmMaestroViviendas()
+        frmMaestroViviendas1.MdiParent = Me
+        frmMaestroViviendas1.Show()
+    End Sub
 End Class
