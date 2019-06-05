@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2019-05-16 23:53:25
+Date: 2019-06-05 17:05:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -37,7 +37,7 @@ CREATE TABLE `asesores` (
 -- ----------------------------
 -- Records of asesores
 -- ----------------------------
-INSERT INTO `asesores` VALUES ('1', '01', 'mauricio', 'ramirez', 'santa ana', '5555-5555', '04007921-9', '2013-051188-203-3');
+INSERT INTO `asesores` VALUES ('1', '1', 'GLENDA', 'GONZALEZ', 'santa ana', '5555-5555', '04007921-9', '2013-051188-203-3');
 
 -- ----------------------------
 -- Table structure for clientes
@@ -61,11 +61,12 @@ CREATE TABLE `clientes` (
   UNIQUE KEY `codcliente` (`codcliente`) USING BTREE,
   KEY `fk_codempresa` (`codempresa`),
   CONSTRAINT `fk_codempresa` FOREIGN KEY (`codempresa`) REFERENCES `empresas` (`codempresa`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of clientes
 -- ----------------------------
+INSERT INTO `clientes` VALUES ('1', '1', 'MAURICIO ALEXANDER', 'RAMIREZ ROSALES', '1988-11-05', 'ALGUN LUGAR', '5555-5555', '04001585-9', '543543-1', '0210-051188-354-5', '1', 'PROGRAMADOR', '2500.00');
 
 -- ----------------------------
 -- Table structure for empresas
@@ -88,7 +89,7 @@ CREATE TABLE `empresas` (
 -- ----------------------------
 -- Records of empresas
 -- ----------------------------
-INSERT INTO `empresas` VALUES ('1', '1', 'FEDEMICRO, SA. DE CV.', 'LKASJDLAKJSDKLAJD', '1111-1111', '1234567-9', '2222-222222-222-1');
+INSERT INTO `empresas` VALUES ('1', '1', 'BANCO AGRICOLA, SA. DE CV.', 'LKASJDLAKJSDKLAJD', '1111-1111', '1234567-9', '2222-222222-222-1');
 
 -- ----------------------------
 -- Table structure for estados_viviendas
@@ -100,11 +101,15 @@ CREATE TABLE `estados_viviendas` (
   `descripcion` char(15) NOT NULL,
   PRIMARY KEY (`idestado_vivienda`),
   UNIQUE KEY `codestado_vivienda` (`codestado_vivienda`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of estados_viviendas
 -- ----------------------------
+INSERT INTO `estados_viviendas` VALUES ('1', '1', 'En Venta');
+INSERT INTO `estados_viviendas` VALUES ('2', '2', 'Vendida');
+INSERT INTO `estados_viviendas` VALUES ('3', '3', 'Alquilada');
+INSERT INTO `estados_viviendas` VALUES ('4', '4', 'Hipotecada');
 
 -- ----------------------------
 -- Table structure for modelos_viviendas
@@ -116,11 +121,14 @@ CREATE TABLE `modelos_viviendas` (
   `descripcion` char(20) NOT NULL,
   PRIMARY KEY (`idmodelo_vivienda`),
   UNIQUE KEY `codmodelo_vivienda` (`codmodelo_vivienda`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelos_viviendas
 -- ----------------------------
+INSERT INTO `modelos_viviendas` VALUES ('1', '1', 'Contemporanea');
+INSERT INTO `modelos_viviendas` VALUES ('2', '2', 'Doble Planta');
+INSERT INTO `modelos_viviendas` VALUES ('3', '3', 'Apartamento');
 
 -- ----------------------------
 -- Table structure for transacciones
@@ -142,7 +150,7 @@ CREATE TABLE `transacciones` (
   CONSTRAINT `asesor_fk` FOREIGN KEY (`codasesor`) REFERENCES `asesores` (`codasesor`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `cliente_fk` FOREIGN KEY (`codcliente`) REFERENCES `clientes` (`codcliente`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `vivienda_fk` FOREIGN KEY (`codvivienda`) REFERENCES `viviendas` (`codvivienda`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of transacciones
@@ -164,8 +172,9 @@ CREATE TABLE `viviendas` (
   KEY `estado_vivienda_fk` (`codestado_vivienda`),
   CONSTRAINT `estado_vivienda_fk` FOREIGN KEY (`codestado_vivienda`) REFERENCES `estados_viviendas` (`codestado_vivienda`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `modelo_vivienda_fk` FOREIGN KEY (`codmodelo_vivienda`) REFERENCES `modelos_viviendas` (`codmodelo_vivienda`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of viviendas
 -- ----------------------------
+INSERT INTO `viviendas` VALUES ('1', '1', '1', '1', '50000.00');
