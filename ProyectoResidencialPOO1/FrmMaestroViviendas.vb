@@ -8,7 +8,7 @@ Public Class FrmMaestroViviendas
         objAdminBotones = New AdministradorBotones(btnAgregar, BtnModificar, btnEliminar, BtnGuardar, btnCancelar)
         objAdminBotones.CambiarEstados(sModo)
 
-        Dim sConsulta As String = String.Format("SELECT * FROM modelos_viviendas")
+        Dim sConsulta As String = String.Format("SELECT codmodelo_vivienda, descripcion FROM modelos_viviendas")
         Dim dt As DataTable = New DataTable()
         dt.Load(BDAdmin.getInstance.EjecutarConsulta(sConsulta))
         cbbModelo.DataSource = dt
@@ -16,7 +16,7 @@ Public Class FrmMaestroViviendas
         cbbModelo.DisplayMember = "descripcion"
 
 
-        sConsulta = String.Format("SELECT * FROM estados_viviendas")
+        sConsulta = String.Format("SELECT codestado_vivienda, descripcion FROM estados_viviendas")
         dt = New DataTable()
         dt.Load(BDAdmin.getInstance.EjecutarConsulta(sConsulta))
         cbbEstado.DataSource = dt
@@ -45,12 +45,12 @@ Public Class FrmMaestroViviendas
                 Return
             Else
                 sConsulta = String.Format("INSERT INTO viviendas ( 'codmodelo_vivienda', 'codestado_vivienda', 'precio') " &
-                                                        "VALUES ('{0}', '{1}', '{2}' )", cbbModelo.ValueMember,
-                                                        cbbEstado.ValueMember, txtPrecio.Text)
+                                                        "VALUES ('{0}', '{1}', {2} )", cbbModelo.SelectedValue.ToString(),
+                                                        cbbEstado.SelectedValue.ToString(), txtPrecio.Text)
             End If
         Else ' Modificando
-            sConsulta = String.Format("UPDATE empresas SET `codvivienda` = '{0}', `codmodelo_vivienda` = '{1}', `codestado_vivienda` = '{2}', `Precio` = '{3}', WHERE codvivienda ='{4}'",
-                                      cbbCodigo.ValueMember, cbbEstado.ValueMember, cbbModelo.ValueMember, txtPrecio.Text, txtCod.Text)
+            sConsulta = String.Format("UPDATE empresas SET `codvivienda` = '{0}', `codmodelo_vivienda` = '{1}', `codestado_vivienda` = '{2}', `Precio` = {3}, WHERE codvivienda ={4}",
+                                      cbbCodigo.SelectedValue.ToString(), cbbEstado.SelectedValue.ToString(), cbbModelo.SelectedValue.ToString(), txtPrecio.Text, txtCod.Text)
         End If
 
         If BDAdmin.getInstance.EjecutarComando(sConsulta) = 1 Then
@@ -79,7 +79,7 @@ Public Class FrmMaestroViviendas
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim sConsulta As String = String.Format("DELETE FROM viviendas WHERE codvivienda = '{0}'", cbbCodigo.Text)
+        Dim sConsulta As String = String.Format("DELETE FROM viviendas WHERE codvivienda = {0}", txtCod.Text)
         If BDAdmin.getInstance.EjecutarComando(sConsulta) = 1 Then
             MessageBox.Show("Registro eliminado satisfactoriamente.")
             'LimpiarTextBoxes()
@@ -93,7 +93,7 @@ Public Class FrmMaestroViviendas
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         MessageBox.Show(cbbModelo.ValueMember)
     End Sub
 End Class

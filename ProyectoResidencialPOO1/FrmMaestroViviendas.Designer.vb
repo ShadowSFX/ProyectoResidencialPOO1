@@ -32,6 +32,7 @@ Partial Class FrmMaestroViviendas
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtCod = New System.Windows.Forms.TextBox()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.cbbEstado = New System.Windows.Forms.ComboBox()
         Me.cbbModelo = New System.Windows.Forms.ComboBox()
@@ -39,8 +40,6 @@ Partial Class FrmMaestroViviendas
         Me.lblEstadoviv = New System.Windows.Forms.Label()
         Me.lblModeloViv = New System.Windows.Forms.Label()
         Me.lblCodigo = New System.Windows.Forms.Label()
-        Me.txtCod = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -140,7 +139,6 @@ Partial Class FrmMaestroViviendas
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.txtCod)
         Me.GroupBox2.Controls.Add(Me.txtPrecio)
         Me.GroupBox2.Controls.Add(Me.cbbEstado)
@@ -155,6 +153,13 @@ Partial Class FrmMaestroViviendas
         Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Información General"
+        '
+        'txtCod
+        '
+        Me.txtCod.Location = New System.Drawing.Point(159, 24)
+        Me.txtCod.Name = "txtCod"
+        Me.txtCod.Size = New System.Drawing.Size(120, 20)
+        Me.txtCod.TabIndex = 21
         '
         'txtPrecio
         '
@@ -217,22 +222,6 @@ Partial Class FrmMaestroViviendas
         Me.lblCodigo.TabIndex = 7
         Me.lblCodigo.Text = "Código:"
         '
-        'txtCod
-        '
-        Me.txtCod.Location = New System.Drawing.Point(159, 24)
-        Me.txtCod.Name = "txtCod"
-        Me.txtCod.Size = New System.Drawing.Size(120, 20)
-        Me.txtCod.TabIndex = 21
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(312, 27)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'FrmMaestroViviendas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -271,5 +260,4 @@ Partial Class FrmMaestroViviendas
     Friend WithEvents cbbCodigo As ComboBox
     Friend WithEvents lblCodigo As Label
     Friend WithEvents txtCod As TextBox
-    Friend WithEvents Button1 As Button
 End Class
