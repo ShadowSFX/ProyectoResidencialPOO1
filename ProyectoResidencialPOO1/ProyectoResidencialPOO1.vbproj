@@ -104,10 +104,22 @@
     <Compile Include="FrmAsesores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmClientes.Designer.vb">
+      <DependentUpon>FrmClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmEmpresas.Designer.vb">
       <DependentUpon>FrmEmpresas.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmEmpresas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaestroViviendas.Designer.vb">
+      <DependentUpon>FrmMaestroViviendas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaestroViviendas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTransacciones.Designer.vb">
@@ -139,8 +151,14 @@
     <EmbeddedResource Include="FrmAsesores.resx">
       <DependentUpon>FrmAsesores.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpresas.resx">
       <DependentUpon>FrmEmpresas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaestroViviendas.resx">
+      <DependentUpon>FrmMaestroViviendas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTransacciones.resx">
       <DependentUpon>frmTransacciones.vb</DependentUpon>
