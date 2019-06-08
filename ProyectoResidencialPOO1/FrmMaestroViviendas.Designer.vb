@@ -50,9 +50,10 @@ Partial Class FrmMaestroViviendas
         Me.lblTitulo.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblTitulo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.ForeColor = System.Drawing.Color.Teal
-        Me.lblTitulo.Location = New System.Drawing.Point(192, 9)
+        Me.lblTitulo.Location = New System.Drawing.Point(256, 11)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(282, 22)
+        Me.lblTitulo.Size = New System.Drawing.Size(376, 27)
         Me.lblTitulo.TabIndex = 26
         Me.lblTitulo.Text = "MAESTRO DE VIVIENDAS"
         Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -61,9 +62,10 @@ Partial Class FrmMaestroViviendas
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox2.Location = New System.Drawing.Point(-7, 0)
+        Me.PictureBox2.Location = New System.Drawing.Point(-9, 0)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(483, 42)
+        Me.PictureBox2.Size = New System.Drawing.Size(643, 51)
         Me.PictureBox2.TabIndex = 27
         Me.PictureBox2.TabStop = False
         '
@@ -71,18 +73,20 @@ Partial Class FrmMaestroViviendas
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(265, 16)
+        Me.Label8.Location = New System.Drawing.Point(353, 20)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(14, 24)
+        Me.Label8.Size = New System.Drawing.Size(19, 29)
         Me.Label8.TabIndex = 26
         Me.Label8.Text = "|"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(366, 19)
+        Me.btnCancelar.Location = New System.Drawing.Point(488, 23)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(100, 28)
         Me.btnCancelar.TabIndex = 26
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -95,44 +99,50 @@ Partial Class FrmMaestroViviendas
         Me.GroupBox1.Controls.Add(Me.BtnGuardar)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 45)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 55)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(447, 56)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(596, 69)
         Me.GroupBox1.TabIndex = 24
         Me.GroupBox1.TabStop = False
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(184, 19)
+        Me.btnEliminar.Location = New System.Drawing.Point(245, 23)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(100, 28)
         Me.btnEliminar.TabIndex = 28
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'BtnModificar
         '
-        Me.BtnModificar.Location = New System.Drawing.Point(103, 19)
+        Me.BtnModificar.Location = New System.Drawing.Point(137, 23)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnModificar.Size = New System.Drawing.Size(100, 28)
         Me.BtnModificar.TabIndex = 29
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = True
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(22, 19)
+        Me.btnAgregar.Location = New System.Drawing.Point(29, 23)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.Size = New System.Drawing.Size(100, 28)
         Me.btnAgregar.TabIndex = 30
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'BtnGuardar
         '
-        Me.BtnGuardar.Location = New System.Drawing.Point(285, 19)
+        Me.BtnGuardar.Location = New System.Drawing.Point(380, 23)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnGuardar.Size = New System.Drawing.Size(100, 28)
         Me.BtnGuardar.TabIndex = 27
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
@@ -147,90 +157,101 @@ Partial Class FrmMaestroViviendas
         Me.GroupBox2.Controls.Add(Me.lblEstadoviv)
         Me.GroupBox2.Controls.Add(Me.lblModeloViv)
         Me.GroupBox2.Controls.Add(Me.lblCodigo)
-        Me.GroupBox2.Location = New System.Drawing.Point(11, 107)
+        Me.GroupBox2.Location = New System.Drawing.Point(15, 132)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(447, 132)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(596, 162)
         Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Información General"
         '
         'txtCod
         '
-        Me.txtCod.Location = New System.Drawing.Point(159, 24)
+        Me.txtCod.Location = New System.Drawing.Point(212, 30)
+        Me.txtCod.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCod.Name = "txtCod"
-        Me.txtCod.Size = New System.Drawing.Size(120, 20)
+        Me.txtCod.Size = New System.Drawing.Size(159, 22)
         Me.txtCod.TabIndex = 21
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(160, 102)
+        Me.txtPrecio.Location = New System.Drawing.Point(213, 126)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(120, 20)
+        Me.txtPrecio.Size = New System.Drawing.Size(159, 22)
         Me.txtPrecio.TabIndex = 20
         '
         'cbbEstado
         '
         Me.cbbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbbEstado.FormattingEnabled = True
-        Me.cbbEstado.Location = New System.Drawing.Point(159, 76)
+        Me.cbbEstado.Location = New System.Drawing.Point(212, 94)
+        Me.cbbEstado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbbEstado.Name = "cbbEstado"
-        Me.cbbEstado.Size = New System.Drawing.Size(121, 21)
+        Me.cbbEstado.Size = New System.Drawing.Size(160, 24)
         Me.cbbEstado.TabIndex = 19
         '
         'cbbModelo
         '
         Me.cbbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbbModelo.FormattingEnabled = True
-        Me.cbbModelo.Location = New System.Drawing.Point(159, 50)
+        Me.cbbModelo.Location = New System.Drawing.Point(212, 62)
+        Me.cbbModelo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbbModelo.Name = "cbbModelo"
-        Me.cbbModelo.Size = New System.Drawing.Size(121, 21)
+        Me.cbbModelo.Size = New System.Drawing.Size(160, 24)
         Me.cbbModelo.TabIndex = 18
         '
         'lblPrecio
         '
         Me.lblPrecio.AutoSize = True
-        Me.lblPrecio.Location = New System.Drawing.Point(81, 105)
+        Me.lblPrecio.Location = New System.Drawing.Point(108, 129)
+        Me.lblPrecio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrecio.Name = "lblPrecio"
-        Me.lblPrecio.Size = New System.Drawing.Size(40, 13)
+        Me.lblPrecio.Size = New System.Drawing.Size(52, 17)
         Me.lblPrecio.TabIndex = 16
         Me.lblPrecio.Text = "Precio:"
         '
         'lblEstadoviv
         '
         Me.lblEstadoviv.AutoSize = True
-        Me.lblEstadoviv.Location = New System.Drawing.Point(20, 79)
+        Me.lblEstadoviv.Location = New System.Drawing.Point(27, 97)
+        Me.lblEstadoviv.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEstadoviv.Name = "lblEstadoviv"
-        Me.lblEstadoviv.Size = New System.Drawing.Size(101, 13)
+        Me.lblEstadoviv.Size = New System.Drawing.Size(132, 17)
         Me.lblEstadoviv.TabIndex = 14
         Me.lblEstadoviv.Text = "Estado de vivienda:"
         '
         'lblModeloViv
         '
         Me.lblModeloViv.AutoSize = True
-        Me.lblModeloViv.Location = New System.Drawing.Point(20, 53)
+        Me.lblModeloViv.Location = New System.Drawing.Point(27, 65)
+        Me.lblModeloViv.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblModeloViv.Name = "lblModeloViv"
-        Me.lblModeloViv.Size = New System.Drawing.Size(103, 13)
+        Me.lblModeloViv.Size = New System.Drawing.Size(134, 17)
         Me.lblModeloViv.TabIndex = 12
         Me.lblModeloViv.Text = "Modelo de vivienda:"
         '
         'lblCodigo
         '
         Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Location = New System.Drawing.Point(80, 27)
+        Me.lblCodigo.Location = New System.Drawing.Point(107, 33)
+        Me.lblCodigo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(43, 13)
+        Me.lblCodigo.Size = New System.Drawing.Size(56, 17)
         Me.lblCodigo.TabIndex = 7
         Me.lblCodigo.Text = "Código:"
         '
         'FrmMaestroViviendas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(470, 251)
+        Me.ClientSize = New System.Drawing.Size(627, 309)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmMaestroViviendas"
         Me.Text = "Maestro de viviendas"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

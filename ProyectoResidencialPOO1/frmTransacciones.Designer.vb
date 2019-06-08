@@ -50,6 +50,8 @@ Partial Class frmTransacciones
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtValor = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.cbbTransaccion = New System.Windows.Forms.ComboBox()
+        Me.lblModeloViv = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,6 +60,8 @@ Partial Class frmTransacciones
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.cbbTransaccion)
+        Me.GroupBox2.Controls.Add(Me.lblModeloViv)
         Me.GroupBox2.Controls.Add(Me.txtNumDoc)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.txtSerie)
@@ -76,7 +80,7 @@ Partial Class frmTransacciones
         Me.txtNumDoc.Location = New System.Drawing.Point(275, 52)
         Me.txtNumDoc.MaxLength = 4
         Me.txtNumDoc.Name = "txtNumDoc"
-        Me.txtNumDoc.Size = New System.Drawing.Size(100, 20)
+        Me.txtNumDoc.Size = New System.Drawing.Size(121, 20)
         Me.txtNumDoc.TabIndex = 2
         '
         'Label5
@@ -330,6 +334,24 @@ Partial Class frmTransacciones
         Me.Label7.TabIndex = 37
         Me.Label7.Text = "_____________________________________________________________________"
         '
+        'cbbTransaccion
+        '
+        Me.cbbTransaccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbbTransaccion.FormattingEnabled = True
+        Me.cbbTransaccion.Location = New System.Drawing.Point(275, 21)
+        Me.cbbTransaccion.Name = "cbbTransaccion"
+        Me.cbbTransaccion.Size = New System.Drawing.Size(121, 21)
+        Me.cbbTransaccion.TabIndex = 25
+        '
+        'lblModeloViv
+        '
+        Me.lblModeloViv.AutoSize = True
+        Me.lblModeloViv.Location = New System.Drawing.Point(182, 24)
+        Me.lblModeloViv.Name = "lblModeloViv"
+        Me.lblModeloViv.Size = New System.Drawing.Size(72, 13)
+        Me.lblModeloViv.TabIndex = 24
+        Me.lblModeloViv.Text = "Transacción: "
+        '
         'frmTransacciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -381,4 +403,6 @@ Partial Class frmTransacciones
     Friend WithEvents Label9 As Label
     Friend WithEvents txtValor As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents cbbTransaccion As ComboBox
+    Friend WithEvents lblModeloViv As Label
 End Class

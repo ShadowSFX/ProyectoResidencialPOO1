@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-
+        Dim fec As String = (Date.ParseExact(txtfecnac.Text, "dd/MM/yyyy", Globalization.CultureInfo.InvariantCulture)).ToString("yyyyMMdd")
         Dim sconsulta As String
 
         If sModo = "C" Then 'creando registro nuevo
@@ -28,16 +28,17 @@
                 MessageBox.Show("Ya existe un asesor con el código ingresado")
                 Return
             Else
-                sconsulta = String.Format("INSERT INTO clientes (`codcliente`, `nombres`, `apellidos`, `fecnac`´, `direccion`, `telefono`, `dui`, `nrc`, `nit`, `codempresa`, `cargo`, `salario`) " &
+                sconsulta = String.Format("INSERT INTO clientes (`codcliente`, `nombres`, `apellidos`, `fecnac`, `direccion`, `telefono`, `dui`, `nrc`, `nit`, `codempresa`, `cargo`, `salario`) " &
                    "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}')", txtCodCliente.Text, txtNombres.Text,
-                                                    txtApellidos.Text, txtfecnac.Text, txtDireccion.Text, txtTelefono.Text, txtDui.Text, TxtNrc.Text, txtNit.Text, TxtcodEmpresa.Text, TxtCargo.Text, TxtSalario.Text)
+                                                    txtApellidos.Text, fec, txtDireccion.Text, txtTelefono.Text, txtDui.Text, TxtNrc.Text, txtNit.Text, TxtcodEmpresa.Text, TxtCargo.Text, TxtSalario.Text)
             End If
 
         Else
 
 
+
             sconsulta = String.Format("UPDATE clientes SET `nombres` = '{0}', `apellidos` = '{1}', `fecnac` = '{2}', `direccion` = '{3}', `telefono` = '{4}', `dui` = '{5}',  `nrc` = '{6}', `nit` = '{7}', `codempresa` = '{8}', `cargo` = '{9}', `salario` = '{10}'" &
-                                   " WHERE codcliente = '{11}'", txtNombres.Text, txtApellidos.Text, txtfecnac.Text, txtDireccion.Text, txtTelefono.Text, txtDui.Text, TxtNrc.Text, txtNit.Text, TxtNrc.Text, TxtcodEmpresa.Text, TxtCargo.Text, TxtSalario.Text, txtCodCliente.Text)
+                                   " WHERE codcliente = '{11}'", txtNombres.Text, txtApellidos.Text, fec, txtDireccion.Text, txtTelefono.Text, txtDui.Text, TxtNrc.Text, txtNit.Text, TxtNrc.Text, TxtcodEmpresa.Text, TxtCargo.Text, TxtSalario.Text, txtCodCliente.Text)
         End If
 
 
@@ -84,5 +85,7 @@
             MessageBox.Show("No se pudo eliminar el asesor.")
         End If
     End Sub
+
+
 End Class
 
